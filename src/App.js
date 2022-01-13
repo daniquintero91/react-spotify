@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+//import Connection from './Connection'
+import { Routes, Route } from 'react-router-dom'
+import LandingPage from './LandingPage';
+import React, { useState } from 'react' 
+import GenrePage from './GenrePage'
+import PlayListFromGen from './PlayListFromGen'
+import PlayListPage from './PlayListPage'
 
 function App() {
+  const [myToken, setMyToken] = useState('')
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path="/" element={<LandingPage />}/>
+      <Route path="/byGenre" element={<GenrePage token={myToken} setToken={setMyToken}/>}/>
+      <Route path="/byGenre/:id" element={<PlayListFromGen token={myToken}/>}/>
+      <Route path="/byPlayList" element={<PlayListPage token={myToken} setToken={setMyToken}/>}/>
+    </Routes>
     </div>
   );
 }
