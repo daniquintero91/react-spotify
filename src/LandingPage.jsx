@@ -1,15 +1,19 @@
-import {Link} from "react-router-dom";
+import {Link, useHref} from "react-router-dom";
 
 export default function LandingPage() {
     return (
         <div>
-          <h1>welcome to your spotify search engine</h1>
+          <img src="./src/Spotify-Logo.png" alt=""></img>
+          <h1>BIENVENIDO A TU SPOTIFY</h1>
+          <h2> Selecciona género o Playlist</h2>
           <button>
-             <Link to="/byGenre">search by genre</Link>
+             <Link to="/byGenre">GENERO</Link>
           </button> 
+          <div> 
           <button>
-             <Link to="/byPlayList">search by playlist</Link>
+             <Link to="/byPlayList">PLAYLIST</Link>
           </button>
+          </div>
         </div>        
     )
 }

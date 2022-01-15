@@ -1,9 +1,10 @@
 .hs {
-    list-style: none;   
+    list-style: none ;   
     text-align: center;
 }
 
 ul, li {
     display: inline-block;
     padding: 30px;
+    background-color: rgb(114, 241, 241);
 }

@@ -20,14 +20,14 @@ export default function PlayListFromGen({token}) {
         <div>
             {playListSucc ? (
                 <>
-                    <h1>the playlist are</h1>
+                    <h1>Las Playlist del género seleccionado son:</h1>
                     <ul>
                        {myPlayList.map(p => <li key={p.id}>{p.name}</li>)}
                     </ul>
                 </>
 
             ): (
-                <h1>spotify is not available</h1>
+                <h1>Spotify is not available</h1>
             )}
 
         </div>

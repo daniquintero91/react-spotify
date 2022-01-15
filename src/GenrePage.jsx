@@ -24,7 +24,7 @@ export default function GenrePage({token, setToken}) {
   
   return(
       <div>
-          <h1>select your preferred genre</h1>
+          <h1>Selecciona el género que quieres escuchar hoy</h1>
           {
             genSucc ? (<ul className={genreS}>
                 {genres.map(g => {
@@ -34,7 +34,7 @@ export default function GenrePage({token, setToken}) {
                         </li>
                     )  
                 })}
-            </ul> ): <h2>spotify is not available</h2>
+            </ul> ): <h2>Spotify is not available</h2>
           }         
       </div>
   )

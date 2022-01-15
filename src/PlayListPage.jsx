@@ -50,12 +50,12 @@ export default function PlayListPage({token, setToken}) {
     <div>
      <form onSubmit={finder}>
       <input type="text" ref={myGendre} />
-      <button onClick={(e) => finder(e)}>search gendre</button>
+      <button onClick={(e) => finder(e)}>BUSCA PLAYLIST</button>
      </form>
      {
          playList.length > 0 ?(
          <>
-            <h1>the playlist are:</h1>
+            <h1>LAS PLAYLIST DEL GÉNERO ELEGIDO SON:</h1>
             <ul>
                 {              
                   playList.map(pl => <li key={pl.id}>{pl.name}</li>)                      
